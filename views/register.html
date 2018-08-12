@@ -29,8 +29,8 @@
   </nav>
 
   <br><br><br><br>
-  <div ng-app="myForm">
-    <form name="registerForm" ng-controller="formCtrl" ng-submit="send()" method="POST">
+  <div ng-app="myForm" ng-controller = "formCtrl">
+    <form name="registerForm" ng-submit="send()" method="POST">
       <div class="container bg-light" style="align : center; width : 500px; height : 400px;">
         <br>
 
@@ -53,7 +53,21 @@
         </div>
       </div>
     </form>
+    <center>
+    <div class="alert alert-success" ng-show="suc" style="align : center; width : 500px; height : 400px; height : 50px;">
+      <strong>Success!</strong> User registered.
+    </div>
+    <div class="alert alert-danger" ng-show="er" style="align : center; width : 500px; height : 400px; height : 120px">
+      <strong>Error!</strong>
+      <ul>
+        Make sure for :
+        <li>Internet Connectivity</li>
+        <li>Unique email Address</li>
+      </ul>
+    </div>
+    </center>
   </div>
+
 
 
 </body>
